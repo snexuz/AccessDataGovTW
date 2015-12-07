@@ -1,9 +1,11 @@
-# 政府資料開放平臺資料集瀏覽及下載次數統計
+# 政府資料開放平臺資料集
 # Contributer: Rafe. C. H. Liu (snexuz@gmail.com)
 # Website: http://www.idealyzt.com/
 # Last update: 2015/12/07
 
-# 示範資料：http://data.gov.tw/node/8693
+# 示範資料：
+# 政府資料開放平臺資料集瀏覽及下載次數統計
+# http://data.gov.tw/node/8693
 
 # (1) .csv
 url <- 'http://data.gov.tw/iisi/logaccess/2877?dataUrl=http://file.data.gov.tw/event/dataset.csv&ndctype=CSV&ndcnid=8693'
