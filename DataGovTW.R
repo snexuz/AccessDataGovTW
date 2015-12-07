@@ -9,8 +9,8 @@
 
 # (1) .csv
 url <- 'http://data.gov.tw/iisi/logaccess/2877?dataUrl=http://file.data.gov.tw/event/dataset.csv&ndctype=CSV&ndcnid=8693'
-x <- read.csv(url, sep = ",", stringsAsFactors = F, header = T)
-head(x)
+y <- read.csv(url, sep = ",", stringsAsFactors = F, header = T)
+head(y)
 
 # (2) XML 
 library(XML)
