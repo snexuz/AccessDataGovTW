@@ -9,15 +9,16 @@
 
 # (1) .csv
 url <- 'http://data.gov.tw/iisi/logaccess/2877?dataUrl=http://file.data.gov.tw/event/dataset.csv&ndctype=CSV&ndcnid=8693'
-y <- read.csv(url, sep = ",", stringsAsFactors = F, header = T)
+y <- read.csv(url, sep = ",", stringsAsFactors = F, header = T, fileEncoding = "utf8")
 head(y)
 
 # (2) XML 
 library(XML)
 url <- 'http://data.gov.tw/iisi/logaccess/2879?dataUrl=http://file.data.gov.tw/event/dataset.xml&ndctype=XML&ndcnid=8693'
-x <- xmlParse(url) # 以 xmlParse 解析 XML 檔案
+x <- xmlParse(url, encoding = "utf8") # 以 xmlParse 解析 XML 檔案
 xmlfiles <- xmlRoot(x) # 將 root 設定到 content 層級（一個偷吃步的做法）
 y <- xmlToDataFrame(xmlfiles) # 轉換成 dataframe
+colnames(y) <- c('資料集提供機關','資料集名稱','瀏覽次數','下載次數','資料集評分')
 
 # (3) json files
 library(jsonlite)
